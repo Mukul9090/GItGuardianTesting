@@ -15,10 +15,12 @@ jobs:
         with:
           fetch-depth: 0        # ← ye add kiya, GitGuardian ko poori git history chahiye
 
-      - name: GitGuardian scan       # ← ye naya step add kiya
+      - name: GitGuardian scan
         uses: GitGuardian/ggshield-action@v1
         env:
           GITGUARDIAN_API_KEY: ${{ secrets.API_KEY_Guardian }}
+        with:
+          args: --all-policies   # ya "scan repo ." wale mode ko force karne wala flag
 
       - name: Run a one-line script
         run: echo Hello, world!
