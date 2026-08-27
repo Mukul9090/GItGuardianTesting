@@ -18,7 +18,7 @@ jobs:
       - name: GitGuardian scan       # ← ye naya step add kiya
         uses: GitGuardian/ggshield-action@v1
         env:
-          GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
+          GITGUARDIAN_API_KEY: ${{ secrets.API_KEY_Guardian }}
 
       - name: Run a one-line script
         run: echo Hello, world!
