@@ -23,4 +23,4 @@ jobs:
       - name: Full repo secret scan
         env:
           GITGUARDIAN_API_KEY: ${{ secrets.API_KEY_Guardian }}
-        run: ggshield secret scan repo . --yes --all-secrets
+        run: ggshield secret scan repo . --all-secrets
